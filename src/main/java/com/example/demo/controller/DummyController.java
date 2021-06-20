@@ -11,6 +11,6 @@ public class DummyController {
 	
 	@RequestMapping("/hello")
 	String sayHello() {
-		return "Hello";
+		return "Hello World";
 	}
 }
