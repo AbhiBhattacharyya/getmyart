@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: getmyart-deployment
+  labels:
+    app: myart
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myart
+  template:
+    metadata:
+      labels:
+        app: myart  
+    spec:
+      containers:
+      - name:  myart-container
+        image: abhilab/repo:myart_api_service
+        ports:
+        - containerPort: 8080
